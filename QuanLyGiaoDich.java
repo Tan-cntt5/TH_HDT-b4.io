@@ -17,9 +17,9 @@ public class QuanLyGiaoDich {
 
     public void xuatDanhSachGiaoDich() {
         for (GiaoDich giaoDich : danhSachGiaoDich) {
-            System.out.println("Mã giao dịch: " + giaoDich.maGd);
-            System.out.println("Ngày giao dịch: " + giaoDich.ngayGd);
-            System.out.println("Thành tiền: " + giaoDich.tinhThanhTien());
+            System.out.println("Ma giao dich: " + giaoDich.maGd);
+            System.out.println("Ngay giao dich: " + giaoDich.ngayGd);
+            System.out.println("Thanh tien: " + giaoDich.tinhThanhTien());
             System.out.println("=================================");
         }
     }
@@ -58,10 +58,10 @@ public class QuanLyGiaoDich {
 
     public void xuatGiaoDichThang9Nam2013() {
         for (GiaoDich giaoDich : danhSachGiaoDich) {
-            if (giaoDich.ngayGd.contains("09/2013")) {
-                System.out.println("Mã giao dịch: " + giaoDich.maGd);
-                System.out.println("Ngày giao dịch: " + giaoDich.ngayGd);
-                System.out.println("Thành tiền: " + giaoDich.tinhThanhTien());
+            if (giaoDich.ngayGd.contains("05/2023")) {
+                System.out.println("Ma giao dich: " + giaoDich.maGd);
+                System.out.println("Ngay giao dich: " + giaoDich.ngayGd);
+                System.out.println("Thanh tien: " + giaoDich.tinhThanhTien());
                 System.out.println("=================================");
             }
         }
@@ -70,10 +70,10 @@ public class QuanLyGiaoDich {
  public static void main(String[] args) {
         QuanLyGiaoDich qlgd = new QuanLyGiaoDich();
 
-        GiaoDichDat gdDat1 = new GiaoDichDat("GD001", "01/09/2013", 100, 200, "A");
-        GiaoDichDat gdDat2 = new GiaoDichDat("GD002", "02/09/2013", 150, 300, "B");
-        GiaoDichNha gdNha1 = new GiaoDichNha("GD003", "03/09/2013", 200, 150, "cao cấp", "123 ABC Street");
-        GiaoDichNha gdNha2 = new GiaoDichNha("GD004", "04/09/2013", 180, 200, "thường", "456 XYZ Street");
+        GiaoDichDat gdDat1 = new GiaoDichDat("GD001", "19/05/2023", 100, 200, "A");
+        GiaoDichDat gdDat2 = new GiaoDichDat("GD002", "20/05/2023", 150, 300, "B");
+        GiaoDichNha gdNha1 = new GiaoDichNha("GD003", "21/05/2023", 200, 150, "cao cap", "Binh tan");
+        GiaoDichNha gdNha2 = new GiaoDichNha("GD004", "25/07/2023", 180, 200, "thuong", "Tan phu");
 
         qlgd.themGiaoDich(gdDat1);
         qlgd.themGiaoDich(gdDat2);
@@ -86,11 +86,11 @@ public class QuanLyGiaoDich {
         int soLuongGiaoDichNha = qlgd.demSoLuongGiaoDichNha();
         double trungBinhThanhTienGiaoDichDat = qlgd.tinhTrungBinhThanhTienGiaoDichDat();
 
-        System.out.println("Số lượng giao dịch đất: " + soLuongGiaoDichDat);
-        System.out.println("Số lượng giao dịch nhà: " + soLuongGiaoDichNha);
-        System.out.println("Trung bình thành tiền giao dịch đất: " + trungBinhThanhTienGiaoDichDat);
+        System.out.println("So luong giao ddch dat: " + soLuongGiaoDichDat);
+        System.out.println("So luong giao dich nha: " + soLuongGiaoDichNha);
+        System.out.println("Trung binh thanh tien giao dich dat: " + trungBinhThanhTienGiaoDichDat);
 
-        System.out.println("Các giao dịch tháng 9 năm 2013:");
+        System.out.println("Cac giao dich thang 5 nam 2023:");
         qlgd.xuatGiaoDichThang9Nam2013();
     }
 }
